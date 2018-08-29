@@ -1,0 +1,17 @@
+server:
+  port: 9095
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+
+spring:
+  application:
+    name: traass-gateway-server
